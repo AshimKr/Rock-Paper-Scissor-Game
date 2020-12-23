@@ -1,0 +1,27 @@
+import java.util.*;
+class Game1
+{
+	public static void main(String[] args)
+	{
+		Random random= new Random();
+		int x= random.nextInt(3);
+		Scanner scan= new Scanner(System.in);
+		System.out.println("Enter 0 for Rock");
+		System.out.println("Enter 1 for Paper");
+		System.out.println("Enter 2 for Sessior");
+		int y= scan.nextInt();
+		System.out.println("Machine:"+x);
+		if(x==0&&y==0  ||  x==1&&y==1  ||  x==2&&y==2){
+			System.out.println("tied");
+		}
+		if(x==0&&y==2 || x==1&&y==0 || x==2&&y==1){
+			System.out.println("you loose");
+		}
+		if(y==0&&x==2 || y==1&&x==0 || y==2&&x==1){
+			System.out.println("You Won");
+		}
+		else{
+			System.out.println("You Entered Wrong Number");
+		}
+	}
+}
